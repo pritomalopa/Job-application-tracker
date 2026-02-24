@@ -107,7 +107,7 @@ function renderJobs() {
 
   filtered.forEach(job => {
     const card = document.createElement("div");
-    card.className = "bg-white p-4 rounded shadow";
+    card.className = "bg-white p-5 rounded shadow relative";
 
     card.innerHTML = `
       <div class="flex justify-between">
@@ -117,8 +117,10 @@ function renderJobs() {
           <p class="text-sm text-gray-500">${job.location} • ${job.type} • ${job.salary}</p>
           <p class="text-sm mt-2 text-gray-600">${job.description}</p>
         </div>
-       <button onclick="deleteJob(${job.id})" class="p-2">
-  <img src="assets/delete.png" class="w-4 h-4 opacity-60 hover:opacity-100">
+   <button onclick="deleteJob(${job.id})"
+  class="absolute top-4 right-4 p-2 rounded hover:bg-gray-100">
+  <img src="assets/delete.png"
+       class="w-6 h-6 opacity-70 hover:opacity-100">
 </button>
       </div>
 
