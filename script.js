@@ -117,7 +117,9 @@ function renderJobs() {
           <p class="text-sm text-gray-500">${job.location} • ${job.type} • ${job.salary}</p>
           <p class="text-sm mt-2 text-gray-600">${job.description}</p>
         </div>
-        <button onclick="deleteJob(${job.id})" class="text-gray-400">🗑</button>
+       <button onclick="deleteJob(${job.id})" class="p-2">
+  <img src="assets/delete.png" class="w-4 h-4 opacity-60 hover:opacity-100">
+</button>
       </div>
 
       <div class="mt-4 flex gap-2">
