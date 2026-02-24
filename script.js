@@ -161,18 +161,6 @@ function updateDashboard() {
   rejectedCount.innerText = jobs.filter(j => j.status === "rejected").length;
 }
 
-document.querySelectorAll(".tab-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    currentTab = btn.dataset.tab;
 
-    document.querySelectorAll(".tab-btn").forEach(b => {
-      b.classList.remove("bg-blue-600", "text-white");
-      b.classList.add("bg-gray-200");
-    });
-
-    btn.classList.add("bg-blue-600", "text-white");
-    renderJobs();
-  });
-});
 
 renderJobs();
